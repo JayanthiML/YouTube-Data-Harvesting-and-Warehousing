@@ -4,18 +4,24 @@ import time
 
 
 st.set_page_config(
-    page_title="YouTube Scrapping",
+    page_title="YouTube Channel Data Analysis",
     layout='wide'
     )
 
-st.title(":red[YouTube Data Scrapping]")
+st.title(":red[YouTube Channal Data Analysis]")
 
 with st.expander("Channel IDs"):
-    channel_id = st.text_input("Enter Channel IDs:", key="channel_ids")
-    st.info("To enter multiple channel IDs separate them with commas")
+    channel_id = st.text_input("Enter Channel ID:", key="channel_ids")
+    st.info("To enter multiple channel IDs, separate them with commas(,). \n\n"
+    "You can get channel ID from the respective channel's about section")
     channel_ids = [cid.strip() for cid in channel_id.split(',')]
 
-api_key = st.text_input("Enter API Key:", type="password", key="api_key")
+
+
+with st.expander("API Key"):
+    api_key = st.text_input("Enter API Key:", type="password", key="api_key")
+    st.info("You can get API Key from Google Cloud Console by creating a project and enabling Youtube API")
+
 
 if 'step' not in st.session_state:
     st.session_state.step = 0
@@ -23,14 +29,14 @@ if 'step' not in st.session_state:
 if st.session_state.step == 0:
     if st.button("Get Channel Info"):
         if api_key and channel_ids:
-            with st.spinner("Fetching Details...."):
+            with st.spinner("Extracting Channel details from Youtube Data API ....."):
                 rawdata = Youtube_API(channel_ids, api_key)
                 rawdata_p = playlist_details(channel_ids, api_key)
                 st.write(rawdata)
                 st.session_state.step = 1
 
 if st.session_state.step == 1:
-    if st.button("Store data"):
+    if st.button("Store data in MongoDB"):
         with st.spinner("Storing the unstructured data to MongoDB Atlas..."):
             insert_data_to_mongodb(channel_ids, api_key)
             insert_playlist_to_mongodb(channel_ids, api_key)
@@ -73,7 +79,7 @@ if st.session_state.step == 2:
             st.dataframe(CommentDF)
 
     if st.button("Migrate to Structured Database"):
-        with st.spinner("Migrating to MySQL..."):
+        with st.spinner("Migrating data to a SQL data warehouse..."):
             try:
                 migrate_channel_to_mysql()
             except Exception as e:
@@ -104,7 +110,7 @@ if st.session_state.step == 2:
                         "What is the average duration of all videos in each channel, and what are their corresponding channel names?",
                         "Which videos have the highest number of comments, and what are their corresponding channel names?"
                         ]
-    question_selected = st.selectbox("Select the question to get answers", options=question)
+    question_selected = st.selectbox("Frequently asked Questions", options=question)
 
     if question_selected == "What are the names of all the videos and their corresponding channels?":
         st.dataframe(Question1())
