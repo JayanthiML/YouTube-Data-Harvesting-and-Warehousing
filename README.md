@@ -22,6 +22,21 @@ I have written the codes in Modular fashion that is in Functional Blocks.
   - Displaying answers for some predefined questions using SQL Query.
   - Display the entire thing in Streamlit Web Application
 
+## Python Libraries used:
+  - googleapiclient
+  - pymongo
+  - pandas
+  - mysql.connector
+  - streamlit
+
+## Skills take away from the project: 
+  - Python scripting,
+  - Data Collection,
+  - MongoDB,
+  - Streamlit,
+  - API integration,
+  - Data Managment using MongoDB (Atlas) and SQL
+
 # Basic Workflow and Execution of the project
 
 ## Data Harvesting from YouTube Data API:
@@ -59,18 +74,3 @@ I have written the codes in Modular fashion that is in Functional Blocks.
   - You can display the retrieved data in the Streamlit app.
   - Users can enter a YouTube channel ID, view the channel details, and select channels to migrate to the data warehouse.
   - I have created Buttons for each tasks. And buttons will appear after the execution of the prior button.
-
-## Python Libraries used:
-  - googleapiclient
-  - pymongo
-  - pandas
-  - mysql.connector
-  - streamlit
-
-## Skills take away from the project: 
-  - Python scripting,
-  - Data Collection,
-  - MongoDB,
-  - Streamlit,
-  - API integration,
-  - Data Managment using MongoDB (Atlas) and SQL
