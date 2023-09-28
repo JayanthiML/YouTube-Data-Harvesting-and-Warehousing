@@ -1,4 +1,4 @@
-from BaseFile import *
+from all_def_funs import *
 import streamlit as st
 import time
 
