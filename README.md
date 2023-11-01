@@ -74,3 +74,6 @@ I have written the codes in Modular fashion that is in Functional Blocks.
   - You can display the retrieved data in the Streamlit app.
   - Users can enter a YouTube channel ID, view the channel details, and select channels to migrate to the data warehouse.
   - I have created Buttons for each tasks. And buttons will appear after the execution of the prior button.
+
+### Run the following command to install all the packages listed in the Requirements.txt file using pip:
+      pip install -r Requirements.txt
