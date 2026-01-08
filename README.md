@@ -1,9 +1,7 @@
 # YouTube Data Harvesting and Warehousing
 
 ##  Project Overview
-YouTube Data Harvesting and Warehousing is an end-to-end data pipeline project that collects data from the YouTube Data API, stores it in MongoDB, and then structures it in a SQL database for analysis. It also provides an interactive interface using Streamlit to explore and query the data.
-
-The goal of this project is to demonstrate the ability to build a complete data ingestion and analytics system — from API extraction to visual exploration.
+This project demonstrates an end-to-end data pipeline that extracts YouTube data using APIs, stores raw data in MongoDB, migrates it to a SQL warehouse, and enables interactive analysis through a Streamlit application.
 
 ---
 
@@ -43,7 +41,7 @@ This project:
 ### 3. **Data Transformation and Warehouse (SQL)**
 - Retrieve data from MongoDB
 - Clean and transform using Python and Pandas
-- Insert into a relational database (MySQL / PostgreSQL) for structured analysis
+- Insert into a relational database (MySQL) for structured analysis
 
 ### 4. **Exploration & Querying**
 - Use SQL queries to answer questions like:
@@ -110,14 +108,9 @@ streamlit run Streamlit_App.py
 ## Usage
 
 * Enter a YouTube **channel ID**
-* Click **Harvest Data**
-
-* Fetches and saves data into MongoDB
-* Click **Migrate to SQL**
-
-* Transfers data into structured SQL tables
-* Visualize analytics in the app interface
-
+* Click **Harvest Data** to fetch and store data in MongoDB
+* Click **Migrate to SQL** to transfer data into structured tables
+* Explore analytics in the Streamlit interface
 ---
 
 ## Features
