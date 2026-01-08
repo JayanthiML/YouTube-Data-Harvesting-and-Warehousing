@@ -88,9 +88,10 @@ pip install -r Requirements.txt
 
 3. **Set up YouTube API**
 
-* Create a Google Cloud project
+* [Create a Google Cloud project](https://console.cloud.google.com)
 * Enable YouTube Data API v3
 * Obtain your API key
+* [Reference Codes](https://developers.google.com/youtube/v3/docs)
 
 4. **Configure databases**
 
@@ -121,10 +122,10 @@ streamlit run Streamlit_App.py
 
 ## Features
 
-✔ API-based data extraction
-✔ MongoDB raw storage
-✔ SQL warehousing
-✔ Querying with SQL joins
+✔ API-based data extraction  
+✔ MongoDB raw storage  
+✔ SQL warehousing  
+✔ Querying with SQL joins  
 ✔ Interactive data exploration using Streamlit
 
 ---
@@ -140,7 +141,7 @@ streamlit run Streamlit_App.py
 
 ## Skills and Learnings
 
-* REST API integration
+* API integration
 * NoSQL & SQL data storage
 * ETL pipeline building
 * Interactive app development
@@ -151,9 +152,9 @@ streamlit run Streamlit_App.py
 
 ## Author
 
-**M L Jayanthi**
-Aspiring Data Scientist
-🔗 [https://github.com/JayanthiML](https://github.com/JayanthiML)
+**M L Jayanthi**  
+Aspiring Data Scientist  
+🔗 [https://github.com/JayanthiML](https://github.com/JayanthiML)  
 🔗 [https://www.linkedin.com/in/jayanthi-ml/](https://www.linkedin.com/in/jayanthi-ml/)
 
 ---
